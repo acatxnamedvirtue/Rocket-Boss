@@ -12,7 +12,7 @@
       <script src="./lib/gameView.js"></script>
   </head>
   <body>
-    <canvas id="canvas"></canvas>
+    <canvas onmousemove="gameView.setMousePosition(event)" onclick="gameView.handleClick(event)" id="canvas"></canvas>
     <script>
       var canvasEl = document.getElementById("canvas");
       canvasEl.height = window.RocketBoss.Game.DIM_Y;
@@ -20,6 +20,7 @@
 
       var gameView = new window.RocketBoss.GameView(canvasEl);
       gameView.start();
+      canvasEl.addEventListener("mousemove", gameView.setMousePosition, false);
     </script>
   </body>
 </html>
