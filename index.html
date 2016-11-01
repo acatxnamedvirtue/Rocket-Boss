@@ -4,6 +4,8 @@
       src="https://code.jquery.com/jquery-3.1.1.slim.min.js"
       integrity="sha256-/SIrNqv8h6QGKDuNoLGA4iret+kyesCkHGzVUUV0shc="
       crossorigin="anonymous"></script>
+      <script src="./lib/missile.js"></script>
+      <script src="./lib/ship.js"></script>
       <script src="./lib/city.js"></script>
       <script src="./lib/base.js"></script>
       <script src="./lib/game.js"></script>
@@ -13,8 +15,8 @@
     <canvas id="canvas"></canvas>
     <script>
       var canvasEl = document.getElementById("canvas");
-      canvas.height = window.RocketBoss.Game.DIM_Y;
-      canvas.width = window.RocketBoss.Game.DIM_X;
+      canvasEl.height = window.RocketBoss.Game.DIM_Y;
+      canvasEl.width = window.RocketBoss.Game.DIM_X;
 
       var gameView = new window.RocketBoss.GameView(canvasEl);
       gameView.start();
